@@ -1,0 +1,15 @@
+@use "../../sass/global/global";
+
+.ac-basic {
+    @apply p-4 min-h-screen flex flex-col justify-between;
+}
+
+.admin {
+    &__container {
+        @extend .ac-basic, .theme-light;
+
+        &-dark {
+            @extend .ac-basic, .theme-dark;
+        }
+    }
+}

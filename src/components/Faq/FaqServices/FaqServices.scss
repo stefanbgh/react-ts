@@ -1,0 +1,31 @@
+.faq-services-cursor {
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❔</text></svg>") 16 0,auto; /*!emojicursor.app*/
+}
+
+.faq {
+    &__services {
+        @apply flex flex-col items-center justify-around w-1/4 border border-gray-300 py-8 hover:bg-green-50 hover:-translate-y-2 hover:rounded-lg transition-all ;
+        @extend .faq-services-cursor;
+        
+        &-icon {
+            @apply bg-green-200 rounded-full p-6 mb-4;
+        }
+
+        &-text {
+            @apply font-bold;
+        }
+    }
+
+    &__services-dark {
+        @apply flex flex-col items-center justify-around w-1/4 border border-gray-300 py-8 hover:bg-green-700 hover:-translate-y-2 hover:rounded-lg transition-all ;
+        @extend .faq-services-cursor;
+
+        &-icon {
+            @apply bg-green-900 rounded-full p-6 mb-4;
+        }
+
+        &-text {
+            @apply font-bold;
+        }
+    }
+}

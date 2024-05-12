@@ -1,0 +1,12 @@
+.faq__answer {
+    @apply px-4 border border-gray-300 w-full overflow-auto;
+
+    &-active {
+        @apply opacity-100 py-4 h-full;
+        transition: all .3s ease-out;
+    }
+
+    &-inactive {
+        @apply h-0 py-0 opacity-0;
+    }
+}

@@ -1,0 +1,57 @@
+.masm-basic {
+    @apply z-50 w-[600px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center flex-col p-8 gap-8 transition-all outline-none;
+}
+
+.x {
+    @apply absolute top-3 right-3 transition-all cursor-pointer;
+}
+
+.modal {
+    &__admin {
+        &-single {
+            &-message {
+                @apply bg-white;
+                @extend .masm-basic;
+
+                &_dark {
+                    @apply bg-gray-900 text-gray-300;
+                    @extend .masm-basic;
+
+                    &-content {
+                        @apply w-full;
+    
+                        &-gap {
+                            @apply mb-4;
+                        }
+    
+                        &-between {
+                            @apply flex justify-between items-center;
+                        }
+                    }
+                }
+
+                &-x {
+                    @apply text-red-400 hover:text-red-500;
+                    @extend .x;
+
+                    &_dark {
+                        @apply text-red-600 hover:text-red-700;
+                        @extend .x;
+                    }
+                }
+
+                &-content {
+                    @apply w-full;
+
+                    &-gap {
+                        @apply mb-4;
+                    }
+
+                    &-between {
+                        @apply flex justify-between items-center;
+                    }
+                }
+            }
+        }
+    }
+}

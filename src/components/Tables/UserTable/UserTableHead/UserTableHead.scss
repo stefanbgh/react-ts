@@ -1,0 +1,13 @@
+.uth-basic {
+    @apply text-xs uppercase;
+}
+
+.user-table-head {
+    @apply  text-blue-400  bg-gray-50;
+    @extend .uth-basic;
+
+    &__dark {
+        @apply text-blue-500 bg-gray-800;
+        @extend .uth-basic;
+    }
+}

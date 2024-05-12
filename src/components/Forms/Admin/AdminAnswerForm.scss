@@ -1,0 +1,46 @@
+.aafcc-basic {
+    @apply w-full h-[200px] resize-none border px-3 py-1 outline-none bg-transparent;
+}
+
+.aafcb-basic {
+    @apply transition-all py-1 px-3 rounded-md;
+}
+
+.admin {
+    &-answer {
+        &-form {
+            @apply w-full;
+
+            &__container {
+                @apply flex flex-col gap-1 mb-4;
+
+                &-content {
+                    @extend .aafcc-basic;
+                    @apply border-gray-700;
+
+                    &-empty {
+                        @apply border-red-400;
+                    }
+                }
+
+                &-warning {
+                    @apply text-red-400 relative -top-1;
+                }
+
+                &-button {
+                    @apply flex justify-end;
+
+                    &-send {
+                        @apply bg-blue-400 hover:bg-blue-500 text-white;
+                        @extend .aafcb-basic;
+                        
+                        &_dark {
+                            @apply bg-blue-600 hover:bg-blue-700 text-gray-300;
+                            @extend .aafcb-basic;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@use "../../../sass/abstract/variables" as vars;
+
+.indented {
+    &-div {
+        @apply flex;
+        
+        &-single {
+            @apply w-1/12;
+        }
+    }
+
+}
+
+.comment {
+    @apply w-11/12 border border-gray-400 flex;
+
+    &__picture {
+        @apply w-1/12 border border-gray-400;
+    }
+
+    &__section {
+        @apply w-11/12 p-4;
+
+        &-info {
+            @apply flex justify-between items-center mb-4;
+        }
+
+        &-content {
+            @apply mb-4;
+        }
+
+        &-reactions {
+            @apply flex items-center gap-3;
+
+            &-container {
+                @apply w-full flex justify-between items-center;
+            }
+
+            &-likes,
+            &-comments {
+                @apply flex items-center gap-1;
+
+                &-icon {
+                    @apply cursor-pointer;
+                }
+            }
+        }
+    }
+}

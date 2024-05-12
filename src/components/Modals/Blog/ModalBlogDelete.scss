@@ -1,0 +1,65 @@
+.modal-blog-delete-basic {
+    @apply z-50 w-[500px] h-[350px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center flex-col p-8 gap-8 transition-all outline-none;;
+}
+
+.modal-blog-delete-button-close-basic {
+    @apply border border-gray-400 transition-all py-1.5 px-3;
+}
+
+.modal-blog-delete-button-yes-basic {
+    @apply transition-all text-white py-1.5 px-3;
+}
+
+.modal {
+    &__blog {
+        &-delete {
+            @apply bg-white;
+            @extend .modal-blog-delete-basic;
+        
+            &-dark {
+                @apply bg-gray-900;
+                @extend .modal-blog-delete-basic;
+            }
+
+            &-question {
+                @apply flex flex-col items-center gap-2;
+
+                &-icon {
+                    @apply text-red-400;
+
+                    &-dark {
+                        @apply text-red-600;
+                    }
+                }
+
+                &-content {
+                    @apply text-center;
+                }
+            }
+
+            &-buttons {
+                @apply flex gap-2 items-center;
+
+                &-close {
+                    @apply hover:bg-gray-400 text-gray-600 hover:text-white;
+                    @extend .modal-blog-delete-button-close-basic;
+
+                    &-dark {
+                        @apply bg-gray-800 hover:bg-gray-700 text-gray-100;
+                        @extend .modal-blog-delete-button-close-basic;
+                    }
+                }
+
+                &-yes {
+                    @apply bg-red-400 hover:bg-red-500;
+                    @extend .modal-blog-delete-button-yes-basic;
+
+                    &-dark {
+                        @apply bg-red-600 hover:bg-red-700 text-gray-100;
+                        @extend .modal-blog-delete-button-yes-basic;
+                    }
+                }
+            }
+        }
+    }
+}

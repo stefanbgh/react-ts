@@ -1,0 +1,41 @@
+.mpie-basic {
+    @apply z-50 w-[500px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center flex-col p-8 gap-8 transition-all outline-none;
+}
+
+.mpief-basic {
+    @apply w-10/12 flex flex-col;
+}
+
+.modal {
+    &__personal {
+        &-info {
+            &-edit {
+                @apply bg-white;
+                @extend .mpie-basic;
+
+                &-dark {
+                    @apply bg-gray-900;
+                    @extend .mpie-basic;
+                }
+
+                &__title {
+                    @apply flex flex-col items-center gap-2;
+
+                    &-content {
+                        @apply text-center;
+                    }
+                }
+
+                &__field {
+                    @apply text-gray-700;
+                    @extend .mpief-basic;
+
+                    &-dark {
+                        @apply text-gray-300;
+                        @extend .mpief-basic;
+                    }
+                }
+            }
+        }
+    }
+}

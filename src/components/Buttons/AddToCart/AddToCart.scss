@@ -1,0 +1,84 @@
+.atc-basic {
+    @apply transition-all text-white flex justify-center items-center gap-2;
+}
+
+.atc {
+    @apply bg-blue-400 hover:bg-blue-500;
+}
+
+.aatc {
+    @apply bg-green-400 hover:bg-green-500;
+}
+
+.atc-dark {
+    @apply bg-blue-600 hover:bg-blue-700;
+}
+
+.aatc-dark {
+    @apply bg-green-600 hover:bg-green-700;
+}
+
+
+.add-to-cart {
+    &__product-details {
+        @extend .atc-basic, .atc;
+        @apply w-1/2 py-2 px-3;
+
+        &-dark {
+            @extend .atc-basic, .atc-dark;
+            @apply w-1/2 py-2 px-3;
+        }
+    }
+
+    &__card {
+        @extend .atc-basic, .atc;
+        @apply w-full py-0.5 ;
+
+        &-dark {
+            @extend .atc-basic, .atc-dark;
+            @apply w-full py-0.5 ;
+        }
+    }
+
+    &__list {
+        @extend .atc-basic, .atc;
+        @apply py-1 px-3;
+
+        &-dark {
+            @extend .atc-basic, .atc-dark;
+            @apply py-1 px-3;
+        }
+    }
+}
+
+.added-to-cart {
+    &__product-details {
+        @extend .atc-basic, .aatc;
+        @apply w-1/2 py-2 px-3;
+
+        &-dark {
+            @extend .atc-basic, .aatc-dark;
+            @apply w-1/2 py-2 px-3;
+        }
+    }
+
+    &__card {
+        @extend .atc-basic, .aatc;
+        @apply w-full py-0.5 ;
+
+        &-dark {
+            @extend .atc-basic, .aatc-dark;
+            @apply w-full py-0.5 ;
+        }
+    }
+
+    &__list {
+        @extend .atc-basic, .aatc;
+        @apply py-1 px-3;
+
+        &-dark {
+            @extend .atc-basic, .aatc-dark;
+            @apply py-1 px-3;
+        }
+    }
+}

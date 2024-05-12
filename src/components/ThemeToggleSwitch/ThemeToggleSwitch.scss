@@ -1,0 +1,40 @@
+@use "../../sass/abstract/variables" as vars;
+
+.theme-basic {
+    width: 40px;
+    height: 20px;
+    border-radius: 25px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5px;
+    cursor: pointer;
+    transition: .3s;
+    margin-right: 4px;
+}
+
+.theme-button-basic {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.theme {
+    @extend .theme-basic;
+
+    &-dark {
+        @extend .theme-basic;
+        @apply justify-end;
+        background: vars.$dark;
+    }
+
+    &__button {
+        @extend .theme-button-basic;
+
+        &-dark {
+            @extend .theme-button-basic;
+            background: vars.$dark;
+        }
+    }
+}

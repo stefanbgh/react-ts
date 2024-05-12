@@ -1,0 +1,25 @@
+.profile {
+    &__sidebar {
+        @apply border border-gray-400 w-1/6 p-4 h-full;
+        
+        &-navigation {
+            @apply border border-gray-300 py-1 px-3 mb-4 flex items-center gap-2 w-full;
+
+            &-active {
+                @apply bg-blue-400 text-white;
+            }
+        }
+    }
+
+    &__sidebar-dark {
+        @apply border border-gray-400 w-1/6 p-4 h-full;
+        
+        &-navigation {
+            @apply border border-gray-300 py-1 px-3 mb-4 flex items-center gap-2 w-full;
+
+            &-active {
+                @apply bg-blue-600 text-white;
+            }
+        }
+    }
+}

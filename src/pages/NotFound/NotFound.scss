@@ -1,0 +1,31 @@
+.nf-basic {
+    @apply flex flex-col justify-center items-center h-screen;
+}
+
+.nfb-basic {
+    @apply bg-yellow-300 hover:bg-yellow-400 transition-all py-1 px-3 mt-2 rounded-md;
+}
+
+.not {
+    &-found {
+        @extend .nf-basic;
+
+        &-dark {
+            @extend .nf-basic;
+            @apply bg-gray-900;
+        }
+
+        &__message {
+            @apply mt-10 text-lg font-bold;
+        }
+
+        &__button {
+            @extend .nfb-basic;
+
+            &-dark {
+                @extend .nfb-basic;
+                @apply text-gray-900;
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export type SortBy = "recommended" | "low-to-high" | "high-to-low" | "latest" | "oldest" | "a-z" | "z-a";

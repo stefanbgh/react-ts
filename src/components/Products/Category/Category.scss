@@ -1,0 +1,31 @@
+.ds {
+    filter: drop-shadow(5px 10px 12px #fff);
+    transition: .3s;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+}
+
+.he {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -7.5px;
+        width: 5px;
+        height: 5px;
+        background: white;
+        transition: .3s;
+        border-radius: 50%;
+    }
+
+    &:hover::before {
+        height: 100%;
+        transition: .3s;
+        border-radius: 5px;
+    }
+}

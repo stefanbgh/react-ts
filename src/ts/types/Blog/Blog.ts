@@ -1,0 +1,1 @@
+export type Blog = "post" | "comment" | "reply";

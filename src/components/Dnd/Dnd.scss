@@ -1,0 +1,57 @@
+.droppable-basic {
+    @apply p-1 w-[250px] min-h-[500px] transition-all;
+}
+
+.draggable-basic {
+    @apply select-none p-4 mb-1 min-h-[50px] text-white;
+}
+
+.dnd {
+    &__droppable {
+        @extend .droppable-basic;
+        @apply bg-gray-100;
+
+        &-active {
+            @extend .droppable-basic;
+            @apply bg-gray-200;
+        }
+
+        &_dark {
+            @extend .droppable-basic;
+            @apply bg-gray-800;
+
+            &-active {
+                @extend .droppable-basic;
+                @apply bg-gray-900;
+            }
+        }
+    }
+
+    &__draggable {
+        @apply bg-blue-400 text-gray-100;
+        @extend .draggable-basic;
+
+        &-active {
+            @apply bg-blue-500 text-gray-100;
+            @extend .draggable-basic;
+        }
+
+        &_dark {
+            @apply bg-blue-500 text-gray-300;
+            @extend .draggable-basic;
+
+            &-active {
+                @apply bg-blue-600 text-gray-300;
+                @extend .draggable-basic;
+            }
+        }
+
+        &_content {
+            @apply text-gray-100;
+
+            &-dark {
+                @apply text-gray-300;
+            }
+        }
+    }
+}

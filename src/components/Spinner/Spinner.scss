@@ -1,0 +1,9 @@
+.spinner {
+    @apply fixed w-full h-screen top-0 left-0 bg-white opacity-90 flex items-center justify-center;
+    z-index: 10000000;
+
+    &-dark {
+        @apply fixed w-full h-screen top-0 left-0 bg-gray-900 opacity-90 flex items-center justify-center;
+        z-index: 10000000;
+    }
+}

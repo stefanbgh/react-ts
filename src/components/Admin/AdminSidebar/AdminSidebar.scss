@@ -1,0 +1,47 @@
+@use "../../../sass/global/global";
+
+.as-basic {
+    @apply flex flex-col border border-gray-400 h-screen;
+}
+
+.asl-basic {
+    @apply transition-all px-5 py-2.5 mb-2 flex items-center;
+}
+
+.asb-basic {
+    @apply px-3 py-1 rounded-lg transition-all;
+}
+
+.admin {
+    &__sidebar {
+        @extend .theme-light, .as-basic;
+
+        &-dark {
+            @extend .theme-dark, .as-basic;
+        }
+
+        &_image {
+            @apply flex justify-center items-center px-5 py-4;
+        }
+
+        &_link {
+            @apply text-blue-400 hover:bg-blue-400 hover:text-white;
+            @extend .asl-basic;
+
+            &-dark {
+                @apply text-blue-400 hover:bg-blue-500 hover:text-gray-300;
+                @extend .asl-basic;
+            }
+        }
+
+        &_button {
+            @apply bg-blue-400 hover:bg-blue-500 text-white;
+            @extend .asb-basic;
+
+            &-dark {
+                @apply bg-blue-500 hover:bg-blue-600 text-gray-300;
+                @extend .asb-basic;
+            }
+        }
+    }
+}

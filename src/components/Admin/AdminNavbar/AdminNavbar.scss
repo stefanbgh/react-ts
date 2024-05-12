@@ -1,0 +1,29 @@
+@use "../../../sass/global/global";
+
+.an-basic {
+    @apply py-5 px-4 flex justify-end items-center gap-2 border border-gray-400;
+}
+
+.ann-basic {
+    @apply w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer;
+}
+
+.admin {
+    &__navbar {
+        @extend .an-basic, .theme-light;
+
+        &-dark {
+            @extend .an-basic, .theme-dark;
+        }
+
+        &_notifications {
+            @apply hover:bg-gray-100;
+            @extend .ann-basic;
+
+            &-dark {
+                @apply hover:bg-gray-800;
+                @extend .ann-basic;
+            }
+        }
+    }
+}

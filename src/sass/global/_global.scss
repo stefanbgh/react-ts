@@ -1,0 +1,9 @@
+.theme {
+    &-dark {
+        @apply bg-gray-900 text-gray-300;
+    }
+
+    &-light {
+        @apply bg-white text-gray-700;
+    }
+}

@@ -1,0 +1,35 @@
+.navbar-navigation-single-basic {
+    @apply text-white py-1 px-3 rounded-md transition-all relative;
+}
+
+.navbar-navigation-single-active-basic {
+    @apply before:rounded-sm  before:absolute before:top-0.5 before:-left-1.5 before:rotate-[-30deg]  before:w-8 before:h-2;
+}
+
+.navbar {
+    @apply flex justify-between items-center relative px-4;
+
+    &__navigation {
+        @apply flex gap-5;
+
+        &-single {
+            @apply bg-blue-400 hover:bg-blue-500;
+            @extend .navbar-navigation-single-basic;
+
+            &-active {
+                @apply bg-blue-400 before:bg-gray-700;
+                @extend .navbar-navigation-single-basic, .navbar-navigation-single-active-basic;
+
+                &-dark {
+                    @apply bg-blue-600 before:bg-gray-300;
+                    @extend .navbar-navigation-single-basic, .navbar-navigation-single-active-basic;
+                }
+            }
+
+            &-dark {
+                @apply bg-blue-600 hover:bg-blue-700;
+                @extend .navbar-navigation-single-basic;
+            }
+        }
+    }
+}

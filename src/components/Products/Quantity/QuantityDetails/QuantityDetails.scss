@@ -1,0 +1,20 @@
+.quantity-details {
+    @apply flex items-center gap-1;
+
+    &__button {
+        @apply border border-gray-100 flex items-center justify-between p-1 w-32;
+
+        &-decrement,
+        &-increment {
+            @apply bg-gray-100 hover:bg-gray-200 transition-all w-3/12 text-center;
+
+            &:disabled {
+                cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:18px;'><text y='50%'>⚠️</text></svg>") 16 0,auto; /*!emojicursor.app*/;
+            }
+        }
+
+        &-count {
+            @apply w-6/12 text-center;
+        }
+    }
+}

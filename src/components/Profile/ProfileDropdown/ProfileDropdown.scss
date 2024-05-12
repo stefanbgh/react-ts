@@ -1,0 +1,33 @@
+.profile {
+    &__dropdown {
+        @apply border border-gray-400 z-10 absolute top-20 right-0 bg-white p-3 w-[175px] transition-all;
+
+        &-tooltip {
+            @apply absolute -top-1.5 right-8 rotate-45 bg-white border-t border-l border-gray-400 w-2.5 h-2.5;
+        }
+
+        &-navigation {
+            @apply flex items-center gap-2 mb-1 px-3 py-1 hover:bg-blue-400 hover:text-white transition-all w-full;
+
+            &-active {
+                @apply bg-blue-400 text-white;
+            }
+        }
+    }
+
+    &__dropdown-dark {
+        @apply border border-gray-400 z-10 absolute top-20 right-0 bg-gray-900 p-3 w-[175px] transition-all;
+
+        &-tooltip {
+            @apply absolute -top-1.5 right-8 rotate-45 bg-gray-900 border-t border-l border-gray-400 w-2.5 h-2.5;
+        }
+
+        &-navigation {
+            @apply flex items-center gap-2 mb-1 px-3 py-1 hover:bg-blue-600 hover:text-white transition-all w-full;
+
+            &-active {
+                @apply bg-blue-600 text-white;
+            }
+        }
+    }
+}

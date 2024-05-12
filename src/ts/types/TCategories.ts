@@ -1,0 +1,1 @@
+export type TCategories = "phones" | "tablets" | "laptops" | "televisions" | "others";

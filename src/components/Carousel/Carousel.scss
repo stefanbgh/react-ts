@@ -1,0 +1,115 @@
+@use "../../sass/abstract/variables" as vars;
+
+.carousel-basic {
+	overflow: hidden;
+	white-space: nowrap;
+	margin: auto;
+	position: relative;
+}
+
+@mixin before($bg) {
+	background: linear-gradient(90deg, $bg 0%, rgba(255,255,255,0) 100%);
+}
+
+@mixin after($bg) {
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%, $bg 100%);
+}
+
+.c-before-after {
+	content: "";
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100px;
+	z-index: 10;
+}
+
+.c-before-light {
+	left: 0;
+	@include before(vars.$light);
+}
+
+.c-after-light {
+	right: 0;
+	@include after(vars.$light);
+}
+
+.c-before-dark {
+	left: 0;
+	@include before(vars.$dark);
+}
+
+.c-after-dark {
+	right: 0;
+	@include after(vars.$dark);
+}
+
+.c-slide {
+	display: inline-block;
+	animation: carousel 10s infinite linear;
+}
+
+.c-icon {
+	display: inline-block;
+	padding: 10px 35px;
+	border-radius: 10px;
+}
+
+.carousel {
+	@extend .carousel-basic;
+
+	&-dark {
+		@extend .carousel-basic;
+
+		&::before,
+		&::after {
+			@extend .c-before-after;
+		}
+
+		&::before {
+			@extend .c-before-dark;
+		}
+
+		&::after {
+			@extend .c-after-dark;
+		}
+
+		&__slide {
+			@extend .c-slide;
+		
+			&-icon {
+				@extend .c-icon;
+			}
+		}
+	}
+
+	&::before,
+	&::after {
+		@extend .c-before-after;
+	}
+
+	&::before {
+		@extend .c-before-light;
+	}
+
+	&::after {
+		@extend .c-after-light;
+	}
+
+	&__slide {
+		@extend .c-slide;
+	
+		&-icon {
+			@extend .c-icon;
+		}
+	}
+}
+
+@keyframes carousel {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}

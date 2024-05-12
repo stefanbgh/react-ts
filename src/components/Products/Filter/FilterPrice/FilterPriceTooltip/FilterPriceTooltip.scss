@@ -1,0 +1,13 @@
+.t-basic {
+    @apply absolute rounded-md text-[10px] py-[2.5px] px-2;
+}
+
+.tooltip {
+    @apply bg-blue-500 text-white;
+    @extend .t-basic;
+
+    &-dark {
+        @apply bg-blue-600 text-gray-100;
+        @extend .t-basic;
+    }
+}

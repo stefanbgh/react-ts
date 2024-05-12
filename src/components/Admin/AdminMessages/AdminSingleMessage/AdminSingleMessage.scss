@@ -1,0 +1,49 @@
+.asmc-basic {
+    @apply flex flex-col border border-gray-400 transition-all
+}
+
+.asmc-cursor {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:20px;'><text y='50%'>👀</text></svg>") 16 0,auto; /*!emojicursor.app*/;
+}
+
+.admin {
+    &-single {
+        &-message {
+            &__container {
+                @extend .asmc-basic, .asmc-cursor;
+                @apply hover:bg-blue-50;
+
+                &-dark {
+                    @extend .asmc-basic, .asmc-cursor;
+                    @apply hover:bg-gray-800;
+                }
+                
+                &-answered {
+                    @extend .asmc-basic, .asmc-cursor;
+                    @apply bg-blue-50;
+
+                    &-dark {
+                        @extend .asmc-basic, .asmc-cursor;
+                        @apply bg-gray-800;
+                    }
+                }
+            }
+
+            &__content {
+                @apply flex flex-col p-4;
+
+                &-between {
+                    @apply flex justify-between items-center;
+
+                    &__text {
+                        @apply text-sm text-gray-400;
+
+                        &_dark {
+                            @apply text-sm text-gray-300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

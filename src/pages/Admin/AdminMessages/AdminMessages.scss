@@ -1,0 +1,23 @@
+.amlmb-basic {
+    @apply transition-all rounded-md py-1 px-3;
+}
+
+.admin {
+    &__messages {
+        &-load {
+            &-more {
+                @apply flex justify-center mt-4;
+
+                &-button {
+                    @apply bg-blue-400 hover:bg-blue-500 text-white;
+                    @extend .amlmb-basic;
+
+                    &__dark {
+                        @apply bg-blue-600 hover:bg-blue-700 text-gray-100;
+                        @extend .amlmb-basic;
+                    }
+                }
+            }
+        }
+    }
+}

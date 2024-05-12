@@ -1,0 +1,11 @@
+.calendar {
+	@apply w-1/2;
+}
+
+.fullcalendar {
+	@apply w-full;
+}
+
+.fc-event-title-container {
+	@apply bg-red-400 border-red-500 outline-none;
+}

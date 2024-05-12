@@ -1,0 +1,64 @@
+@use "../../sass/abstract/variables" as vars;
+
+.contact-box-basic {
+    @apply flex items-center gap-2;
+}
+
+.contact-link-basic {
+    @apply text-blue-400 hover:text-blue-500 transition-all font-bold;
+}
+
+.contact-link-basic-dark {
+    @apply text-blue-600 hover:text-blue-700 transition-all font-bold;
+}
+
+.contact-selection-basic {
+    @apply selection:bg-blue-400 selection:text-white;
+}
+
+.contact-selection-basic-dark {
+    @apply selection:bg-gray-700 selection:text-gray-100;
+}
+
+.contact {
+    @apply h-1/3 flex flex-col gap-0.5;
+
+    &__github,
+    &__linkedin {
+        @extend .contact-box-basic;
+
+        &-link {
+            @extend .contact-link-basic;
+            @extend .contact-selection-basic;
+
+            &-dark {
+                @extend .contact-link-basic-dark;
+                @extend .contact-selection-basic-dark;
+            }
+        }
+    }
+
+    &__linkedin {
+        &-icon {
+            color: vars.$linkedin;
+        }
+    }
+
+    &__gmail {
+        @extend .contact-box-basic;
+
+        &-icon {
+            color: vars.$gmail;
+        }
+
+        &-paragraph {
+            @apply text-blue-400 font-bold;
+            @extend .contact-selection-basic;
+
+            &-dark {
+                @apply text-blue-600 font-bold;
+                @extend .contact-selection-basic-dark;
+            }
+        }
+    }
+}

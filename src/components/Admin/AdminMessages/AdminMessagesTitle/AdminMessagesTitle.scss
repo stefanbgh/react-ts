@@ -1,0 +1,19 @@
+.admin {
+    &-messages {
+        &-title {
+            @apply flex justify-center py-4 bg-blue-400;
+
+            &_dark {
+                @apply flex justify-center py-4 bg-blue-600;
+            }
+
+            &__content {
+                @apply text-gray-100;
+
+                &_dark {
+                    @apply text-gray-300;
+                }
+            }
+        }
+    }
+}

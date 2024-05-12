@@ -1,0 +1,27 @@
+.load {
+    &__more {
+        @apply w-full py-6 flex items-center justify-center;
+
+        &-button {
+            @apply py-1 px-3 rounded-md bg-blue-400 hover:bg-blue-500 transition-all text-white;
+
+            &-dark {
+                @apply py-1 px-3 rounded-md bg-blue-600 hover:bg-blue-700 transition-all text-white;
+            }
+        }
+    }
+}
+
+.three {
+    &__dots {
+        @apply w-full pt-2 pb-6 flex items-center justify-center;
+
+        &-icon {
+            @apply bg-blue-400 hover:bg-blue-500 transition-all w-10 rounded-full cursor-pointer text-white;
+            
+            &-dark {
+                @apply bg-blue-600 hover:bg-blue-700 transition-all w-10 rounded-full cursor-pointer text-white;
+            }
+        }
+    }
+}

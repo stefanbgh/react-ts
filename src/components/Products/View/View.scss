@@ -1,0 +1,11 @@
+.view {
+    @apply border border-gray-300 p-1;
+
+    &-active {
+        @apply border border-blue-400 shadow-md rounded-sm p-1;
+    }
+    
+    &-icon {
+        @apply text-blue-400 hover:text-blue-500 transition-all;
+    }
+}

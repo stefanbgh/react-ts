@@ -1,0 +1,33 @@
+.admin {
+    &-single {
+        &-message {
+            &-answer {
+                &__container {
+                    @apply w-full;
+
+                    &-dark {
+                        @apply w-full;
+                    }
+                }
+
+                &__divider {
+                    @apply w-full bg-gray-400 h-[2px];
+                }
+
+                &__sender {
+                    @apply mb-4 pt-2;
+
+                    &-and {
+                        &-timestamp {
+                            @apply flex justify-between items-center;
+                        }
+                    }
+                }
+
+                &__content {
+                    @apply mb-4;
+                }
+            }
+        }
+    }
+}

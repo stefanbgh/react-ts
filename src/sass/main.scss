@@ -1,0 +1,29 @@
+/* ABSTRACT */
+@import "./abstract/variables";
+
+/* BASE */
+@import "base/base";
+
+/* GLOBAL */
+@import "./global/global";
+
+/* TAILWIND */
+@tailwind base;
+
+@layer base {
+    h1 {
+        @apply text-3xl font-bold text-slate-500;
+    }
+    h2 {
+        @apply text-2xl font-bold text-slate-500;
+    }
+    h3 {
+        @apply text-lg font-bold text-slate-500;
+    }
+    h4 {
+        @apply text-base font-bold text-slate-500;
+    }
+}
+
+@tailwind components;
+@tailwind utilities;
